@@ -427,7 +427,7 @@ We can think of the algorithm as a function—we give the algorithm data and it 
 
 **Model = Algorithm(Data)Model=Algorithm(Data)**
 
-#### Machine Learning Algorithms
+### Machine Learning Algorithms
 We can think of an algorithm as a mathematical tool that can usually be represented by an equation as well as implemented in code. For example, y = Wx + b is an algorithm that can be used to calculate y from x if the values for W and b are known. But how do we get W and b?
 
 This is the learning part of machine learning; That is, we can learn these values from training data. For example, suppose the following data are collected:
@@ -437,9 +437,10 @@ x | y
 1 | 1
 2 | 2
 3 | 3
+
 We can plug the data into the algorithm and calculate W = 1 and b = 0. We would say that that the algorithm was run on the data and learned the values ofr W and b. The output of the learning process is W = 1 and b = 0.
 
-#### Machine Learning Models
+### Machine Learning Models
 
 Machine learning models are outputs or specific representations of algorithms that run on data. A model represents what is learned by a machine learning algorithm on the data.
 
