@@ -7,6 +7,7 @@
 5. [Encoding Categorical Data](#encoding-categorical-data)
 6. [Image Data](#image-data)
 7. [Text Data](#text-data)
+8. [Two Perspective on ML](#two-perspective-on-)
 
 ## What is Machine Learning?
 
@@ -244,4 +245,24 @@ We understand the text because each word has a meaning. But how do algorithms un
 Vectors with length n can be visualized as a line in an n dimension space. For example, a vector (1,1) can be viewed as a line starting from (0, 0) and ending at (1,1).
 
 ![graph](graph.png)
+
+Any vector with the same length can be visualized in the same space. How close one vector is to another can be calculated as vector distance. If two vectors are close to each other, we can say the text represented by the two vectors have a similar meaning or have some connections. For example, if we add [lazy, fox] to our example:
+
+    | quick | fox | lazy | dog | rabid | hare
+----|-------|-----|------|-----|-------|------
+[quick, fox] | 0.32 | 0.23 | 0.0 | 0.0 | 0.0 | 0.0
+[lazy, dog] | 0.0 | 0.0 | 0.12 | 0.23 | 0.0 | 0.0
+[rabid, hare] | 0.0 | 0.0 | 0.0 | 0.0 | 0.56 | 0.12
+[lazy, fox] | 0.0 | 0.23 | 0.12 | 0.0 | 0.0 | 0.0
+
+Apparently, [lazy, fox] is more similar to [lazy, dog] than [rabid, hare], so the vector distance of [lazy, fox] and [lazy, dog] is smaller than that to [lazy, fox] and [rabid, hare].
+
+In summary, a typical pipeline for text data begins by pre-processing or normalizing the text. This step typically includes tasks such as breaking the text into sentence and word tokens, standardizing the spelling of words, and removing overly common words (called stop words).
+
+The next step is feature extraction and vectorization, which creates a numeric representation of the documents. Common approaches include TF-IDF vectorization, Word2vec, and Global Vectors (GloVe).
+
+Last, we will feed the vectorized document and labels into a model and start the training.
+
+![textdata](textdata.png)
+
 
