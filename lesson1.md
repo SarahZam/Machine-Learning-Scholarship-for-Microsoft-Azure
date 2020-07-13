@@ -11,6 +11,7 @@
 9. [The Statistical Perspective](#the-statistical-perspective)
 10. [The Tools for Machine Learning](#the-tools-for-machine-learning)
 11. [Libraries for Machine Learning](#libraries-for-machine-learning)
+12. [Cloud Services for Machine Learning](#cloud-services-for-machine-learning)
 
 ## What is Machine Learning?
 
@@ -344,36 +345,48 @@ You can analyze and train a small amount of data with your local machine using J
 ##### [Pandas](https://pandas.pydata.org/)
  Pandas is an open-source Python library designed for analyzing and manipulating data. It is particularly good for working with tabular data and time-series data.
 
-##### NumPy
+##### [NumPy](https://numpy.org/)
  Like Pandas, NumPy is a Python library. NumPy provides support for large, multi-dimensional arrays of data, and has many high-level mathematical functions that can be used to perform operations on these arrays.
 
 ### Machine Learning and Deep Learning
 
-##### Scikit-Learn
+##### [Scikit-Learn](https://scikit-learn.org/stable/)
 It is a Python library designed specifically for machine learning. It is designed to be integrated with other scientific and data-analysis libraries, such as NumPy, SciPy, and matplotlib (described below).
 
-##### Apache Spark
+##### [Apache Spark](https://spark.apache.org/)
  It is an open-source analytics engine that is designed for cluster-computing and that is often used for large-scale data processing and big data.
 
-##### TensorFlow
+##### [TensorFlow](https://www.tensorflow.org/)
  TensorFlow is a free, open-source software library for machine learning built by Google Brain.
 
-###### Keras
+##### [Keras](https://keras.io/)
 It  is a Python deep-learning library. It provide an Application Programming Interface (API) that can be used to interface with other libraries, such as TensorFlow, in order to program neural networks. Keras is designed for rapid development and experimentation.
 
-###### PyTorch
+##### [PyTorch](https://pytorch.org/)
 PyTorch is an open source library for machine learning, developed in large part by Facebook's AI Research lab. It is known for being comparatively easy to use, especially for developers already familiar with Python and a Pythonic code style.
 
 ### Data Visualization
 
-##### Plotly
+##### [Plotly](https://plotly.com/)
 It is not itself a library, but rather a company that provides a number of different front-end tools for machine learning and data science—including an open source graphing library for Python.
 
-##### Matplotlib
+##### [Matplotlib](https://matplotlib.org/)
 It is a Python library designed for plotting 2D visualizations. It can be used to produce graphs and other figures that are high quality and usable in professional publications. You'll see that the Matplotlib library is used by a number of other libraries and tools, such as SciKit Learn (above) and Seaborn (below). You can easily import Matplotlib for use in a Python script or to create visualizations within a Jupyter Notebook.
 
-##### Seaborn
+##### [Seaborn](https://seaborn.pydata.org/)
 Seaborn is a Python library designed specifically for data visualization. It is based on matplotlib, but provides a more high-level interface and has additional features for making visualizations more attractive and informative.
 
-##### Bokeh
+##### [Bokeh](https://bokeh.org/)
 It is an interactive data visualization library. In contrast to a library like matplotlib that generates a static image as its output, Bokeh generates visualizations in HTML and JavaScript. This allows for web-based visualizations that can have interactive features.
+
+## Cloud Services for Machine Learning
+
+A typical cloud service for machine learning provides support for managing the core assets involved in machine learning projects. 
+
+Feature | Description
+--------|------------
+Datasets | Define, version, and monitor datasets used in machine learning runs.
+Experiments / Runs | Organize machine learning workloads and keep track of each task executed through the service.
+Pipelines | Structured flows of tasks to model complex machine learning flows.
+Models | Model registry with support for versioning and deployment to production.
+Endpoints | Expose real-time endpoints for scoring as well as pipelines for advanced automation.
