@@ -9,6 +9,8 @@
 7. [Text Data](#text-data)
 8. [The Computer Science Perspective](#the-computer-science-perspective)
 9. [The Statistical Perspective](#the-statistical-perspective)
+10. [The Tools for Machine Learning](#the-tools-for-machine-learning)
+11. [Libraries for Machine Learning](#libraries-for-machine-learning)
 
 ## What is Machine Learning?
 
@@ -292,6 +294,8 @@ Remember that in a typical case of machine learning, you have some kind of input
 ** => Dependent Variable = f(Independent Variables) **
 ** => Y = f(x) **
 
+In the case of multiple input variables, X would be an input vector, meaning that it would be composed of multiple individual inputs (e.g. (908721, Guess, Blue, 789, 45.33)). When this is the case, you'll see the individual inputs denoted with a subscript, as in X1, X2, X3, and so on.
+
 In statistics, you'll also see the data described in terms of independent variables and dependent variables. These names come from the idea that the value of one variable may depend on the value of some other variables. For example, the selling price of a house is the dependent variable that depends on some independent variables—like the house's location and size.
 
 SKU | Make | Color | Quantity | Price
@@ -300,3 +304,76 @@ SKU | Make | Color | Quantity | Price
 456552 | Tillys | Red | 244 | 22.91
 789921 | A&F | Green | 387 | 25.92
 872266 | Guess | Blue | 154 | 17.56
+
+We might use data in each row (e.g. (908721, Guess, Blue, 789, 45.33)) to predict the sale of the corresponding item. Thus, the sale of each item is dependent on the data in each row. We can call the data in each row the independent variables and call the sale the dependent variable.
+
+## The Tools for Machine Learning
+
+A typical machine learning ecosystem is made up of three main components:
+
+### 1. Libraries:
+ When you're working on a machine learning project, you likely will not want to write all of the necessary code yourself—instead, you'll want to make use of code that has already been created and refined. That's where libraries come in. A library is a collection of pre-written (and compiled) code that you can make use of in your own project. NumPy is an example of a library popularly used in data science, while TensorFlow is a library specifically designed for machine learning. 
+
+### 2. Development environments:
+A development environment is a software application (or sometimes a group of applications) that provide a whole suite of tools designed to help you (as the developer or machine learning engineer) build out your projects. Jupyter Notebooks and Visual Studio are examples of development environments that are popular for coding many different types of projects, including machine learning projects.
+
+### 3. Cloud services:
+ A cloud service is a service that offers data storage or computing power over the Internet. In the context of machine learning, you can use a cloud service to access a server that is likely far more powerful than your own machine, or that comes equipped with machine learning models that are ready for you to use.
+
+For each of these components, there are multiple options you can choose from. Let's have a look at some examples.
+
+#### Notebooks
+Notebooks are originally created as a documenting tool that others can use to reproduce experiments. Notebooks typically contain a combination of runnable code, output, formatted text, and visualizations. One of the most popular open-source notebooks used today by data scientists and data science engineers is Jupyter notebook, which can combine code, formatted text (markdown) and visualization.
+
+Notebooks contains several independent cells that allow for the execution of code snippets within those cells. The output of each cell can be saved in the notebook and viewed by others.
+
+![tools](tools.png)
+
+#### End-to-end with Azure
+You can analyze and train a small amount of data with your local machine using Jupyter notebook, Visual studio, or other tools. But with very large amounts of data, or you need a faster processor, it's a better idea to train and test the model remotely using cloud services such as Microsoft Azure. You can use Azure Data Science Virtual Machine, Azure Databricks, Azure Machine Learning Compute, or SQL server ML services to train and test models and use Azure Kubernetes to deploy models.
+
+![Azure](azure.png)
+
+## Libraries for Machine Learning
+
+### Core Framework and Tools
+
+##### Python
+ Python is a very popular high-level programming language that is great for data science. Its ease of use and wide support within popular machine learning platforms, coupled with a large catalog of ML libraries, has made it a leader in this space.
+
+##### Pandas
+ [Pandas](https://pandas.pydata.org/) is an open-source Python library designed for analyzing and manipulating data. It is particularly good for working with tabular data and time-series data.
+
+##### NumPy
+ Like Pandas, NumPy is a Python library. NumPy provides support for large, multi-dimensional arrays of data, and has many high-level mathematical functions that can be used to perform operations on these arrays.
+
+### Machine Learning and Deep Learning
+
+##### Scikit-Learn
+It is a Python library designed specifically for machine learning. It is designed to be integrated with other scientific and data-analysis libraries, such as NumPy, SciPy, and matplotlib (described below).
+
+##### Apache Spark
+ It is an open-source analytics engine that is designed for cluster-computing and that is often used for large-scale data processing and big data.
+
+##### TensorFlow
+ TensorFlow is a free, open-source software library for machine learning built by Google Brain.
+
+###### Keras
+It  is a Python deep-learning library. It provide an Application Programming Interface (API) that can be used to interface with other libraries, such as TensorFlow, in order to program neural networks. Keras is designed for rapid development and experimentation.
+
+###### PyTorch
+PyTorch is an open source library for machine learning, developed in large part by Facebook's AI Research lab. It is known for being comparatively easy to use, especially for developers already familiar with Python and a Pythonic code style.
+
+### Data Visualization
+
+##### Plotly
+It is not itself a library, but rather a company that provides a number of different front-end tools for machine learning and data science—including an open source graphing library for Python.
+
+##### Matplotlib
+It is a Python library designed for plotting 2D visualizations. It can be used to produce graphs and other figures that are high quality and usable in professional publications. You'll see that the Matplotlib library is used by a number of other libraries and tools, such as SciKit Learn (above) and Seaborn (below). You can easily import Matplotlib for use in a Python script or to create visualizations within a Jupyter Notebook.
+
+##### Seaborn
+Seaborn is a Python library designed specifically for data visualization. It is based on matplotlib, but provides a more high-level interface and has additional features for making visualizations more attractive and informative.
+
+##### Bokeh
+It is an interactive data visualization library. In contrast to a library like matplotlib that generates a static image as its output, Bokeh generates visualizations in HTML and JavaScript. This allows for web-based visualizations that can have interactive features.
