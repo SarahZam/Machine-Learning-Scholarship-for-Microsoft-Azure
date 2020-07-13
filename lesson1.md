@@ -271,7 +271,7 @@ Last, we will feed the vectorized document and labels into a model and start the
 
 ## The Computer Science Perspective
 
-** Output = Program(intput features)**
+**Output = Program(intput features)**
 
 SKU | Make | Color | Quantity | Price
 ----|------|-------|----------|------
@@ -290,9 +290,9 @@ Remember that in a typical case of machine learning, you have some kind of input
 
  ## The Statistical Perspective
 
- ** Output Variable = f(Input Variables) **
-** => Dependent Variable = f(Independent Variables) **
-** => Y = f(x) **
+ **Output Variable = f(Input Variables)**
+**=> Dependent Variable = f(Independent Variables)**
+**=> Y = f(x)**
 
 In the case of multiple input variables, X would be an input vector, meaning that it would be composed of multiple individual inputs (e.g. (908721, Guess, Blue, 789, 45.33)). When this is the case, you'll see the individual inputs denoted with a subscript, as in X1, X2, X3, and so on.
 
@@ -311,25 +311,25 @@ We might use data in each row (e.g. (908721, Guess, Blue, 789, 45.33)) to predic
 
 A typical machine learning ecosystem is made up of three main components:
 
-### 1. Libraries:
+#### 1. Libraries:
  When you're working on a machine learning project, you likely will not want to write all of the necessary code yourself—instead, you'll want to make use of code that has already been created and refined. That's where libraries come in. A library is a collection of pre-written (and compiled) code that you can make use of in your own project. NumPy is an example of a library popularly used in data science, while TensorFlow is a library specifically designed for machine learning. 
 
-### 2. Development environments:
+#### 2. Development environments:
 A development environment is a software application (or sometimes a group of applications) that provide a whole suite of tools designed to help you (as the developer or machine learning engineer) build out your projects. Jupyter Notebooks and Visual Studio are examples of development environments that are popular for coding many different types of projects, including machine learning projects.
 
-### 3. Cloud services:
+#### 3. Cloud services:
  A cloud service is a service that offers data storage or computing power over the Internet. In the context of machine learning, you can use a cloud service to access a server that is likely far more powerful than your own machine, or that comes equipped with machine learning models that are ready for you to use.
 
 For each of these components, there are multiple options you can choose from. Let's have a look at some examples.
 
-#### Notebooks
+##### Notebooks
 Notebooks are originally created as a documenting tool that others can use to reproduce experiments. Notebooks typically contain a combination of runnable code, output, formatted text, and visualizations. One of the most popular open-source notebooks used today by data scientists and data science engineers is Jupyter notebook, which can combine code, formatted text (markdown) and visualization.
 
 Notebooks contains several independent cells that allow for the execution of code snippets within those cells. The output of each cell can be saved in the notebook and viewed by others.
 
 ![tools](tools.png)
 
-#### End-to-end with Azure
+##### End-to-end with Azure
 You can analyze and train a small amount of data with your local machine using Jupyter notebook, Visual studio, or other tools. But with very large amounts of data, or you need a faster processor, it's a better idea to train and test the model remotely using cloud services such as Microsoft Azure. You can use Azure Data Science Virtual Machine, Azure Databricks, Azure Machine Learning Compute, or SQL server ML services to train and test models and use Azure Kubernetes to deploy models.
 
 ![Azure](azure.png)
@@ -341,8 +341,8 @@ You can analyze and train a small amount of data with your local machine using J
 ##### Python
  Python is a very popular high-level programming language that is great for data science. Its ease of use and wide support within popular machine learning platforms, coupled with a large catalog of ML libraries, has made it a leader in this space.
 
-##### Pandas
- [Pandas](https://pandas.pydata.org/) is an open-source Python library designed for analyzing and manipulating data. It is particularly good for working with tabular data and time-series data.
+##### [Pandas](https://pandas.pydata.org/)
+ Pandas is an open-source Python library designed for analyzing and manipulating data. It is particularly good for working with tabular data and time-series data.
 
 ##### NumPy
  Like Pandas, NumPy is a Python library. NumPy provides support for large, multi-dimensional arrays of data, and has many high-level mathematical functions that can be used to perform operations on these arrays.
