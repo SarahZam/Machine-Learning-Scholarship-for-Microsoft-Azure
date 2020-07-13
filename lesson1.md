@@ -249,15 +249,10 @@ Vectors with length n can be visualized as a line in an n dimension space. For e
 Any vector with the same length can be visualized in the same space. How close one vector is to another can be calculated as vector distance. If two vectors are close to each other, we can say the text represented by the two vectors have a similar meaning or have some connections. For example, if we add [lazy, fox] to our example:
 
 words-> | quick | fox | lazy | dog | rabid | hare
-
 --------|-------|-----|------|-----|-------|------
-
 [quick, fox] | 0.32 | 0.23 | 0.0 | 0.0 | 0.0 | 0.0
-
 [lazy, dog] | 0.0 | 0.0 | 0.12 | 0.23 | 0.0 | 0.0
-
 [rabid, hare] | 0.0 | 0.0 | 0.0 | 0.0 | 0.56 | 0.12
-
 [lazy, fox] | 0.0 | 0.23 | 0.12 | 0.0 | 0.0 | 0.0
 
 Apparently, [lazy, fox] is more similar to [lazy, dog] than [rabid, hare], so the vector distance of [lazy, fox] and [lazy, dog] is smaller than that to [lazy, fox] and [rabid, hare].
