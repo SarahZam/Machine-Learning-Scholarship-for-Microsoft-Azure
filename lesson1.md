@@ -12,6 +12,7 @@
 10. [The Tools for Machine Learning](#the-tools-for-machine-learning)
 11. [Libraries for Machine Learning](#libraries-for-machine-learning)
 12. [Cloud Services for Machine Learning](#cloud-services-for-machine-learning)
+13. [Models vs. Algorithms](#models-vs.-algorithms)
 
 ## What is Machine Learning?
 
@@ -386,7 +387,62 @@ A typical cloud service for machine learning provides support for managing the c
 Feature | Description
 --------|------------
 Datasets | Define, version, and monitor datasets used in machine learning runs.
-Experiments / Runs | Organize machine learning workloads and keep track of each task executed through the service.
+Experiments/Runs | Organize machine learning workloads and keep track of each task executed through the service.
 Pipelines | Structured flows of tasks to model complex machine learning flows.
 Models | Model registry with support for versioning and deployment to production.
 Endpoints | Expose real-time endpoints for scoring as well as pipelines for advanced automation.
+
+Machine learning cloud services also need to provide support for managing the resources required for running machine learning tasks:
+
+Feature | Description
+--------|------------
+Compute | Manage compute resources used by machine learning tasks.
+Environments | Templates for standardized environments used to create compute resources.
+Datastore | Data sources connected to the service environment (e.g. blob stores, file shares, Data Lake stores, databases).
+
+### Azure ML workspace
+
+Following are some of the features in Azure ML workspace, a centralized place to work with all the artifacts you create:
+
+Feature | Description
+--------|------------
+Automated ML | Automate intensive tasks that rapidly iterate over many combinations of algorithms, hyperparameters to find the best model based on the chosen metric.
+Designer | A drag-and-drop tool that lets you create ML models without a single line of code.
+Datasets | A place you can create datasets.
+Experiments	A place that helps you organize your runs.
+Models | A place to save all the models created in Azure ML or trained outside of Azure ML.
+Endpoints | A place stores real-time endpoints for scoring and pipeline endpoints for advanced automation.
+Compute | A designated compute resource where you run the training script or host the service deployment.
+Datastores | An attached storage account in which you can store datasets.
+
+## Models vs. Algorithms
+
+In machine learning, the key distinction of a model and an algorithm is:
+
+Models are the specific representations learned from data
+
+Algorithms are the processes of learning
+
+We can think of the algorithm as a function—we give the algorithm data and it produces a model:
+
+**Model = Algorithm(Data)Model=Algorithm(Data)**
+
+#### Machine Learning Algorithms
+We can think of an algorithm as a mathematical tool that can usually be represented by an equation as well as implemented in code. For example, y = Wx + b is an algorithm that can be used to calculate y from x if the values for W and b are known. But how do we get W and b?
+
+This is the learning part of machine learning; That is, we can learn these values from training data. For example, suppose the following data are collected:
+
+x | y
+--|--
+1 | 1
+2 | 2
+3 | 3
+We can plug the data into the algorithm and calculate W = 1 and b = 0. We would say that that the algorithm was run on the data and learned the values ofr W and b. The output of the learning process is W = 1 and b = 0.
+
+#### Machine Learning Models
+
+Machine learning models are outputs or specific representations of algorithms that run on data. A model represents what is learned by a machine learning algorithm on the data.
+
+In the previous example, y = 1*x + 0 is the model we obtained from running the algorithm y = Wx + b on the training data. We can also say that y = 1*x + 0 is the model that can be used to predict y from x.
+
+A machine learning model can also be written in a set of weights or coefficients instead of a full equation. Looking at the previous example, since we know the algorithm, it is redundant to keep the full equation y = 1*x + 0. All we need are the weights (or coefficients) W = 1 and b = 0. Thus, we can also think of a model as a set of weights (or coefficients) that have been learned.
