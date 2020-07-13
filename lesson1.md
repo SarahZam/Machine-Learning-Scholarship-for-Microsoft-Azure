@@ -1,7 +1,7 @@
 # Introduction to Machine Learning
 
 1. [What is Machine Learning](#what-is-machine-learning)
-2. [Application of Machine Learning(#application-of-machine-learning)
+2. [Application of Machine Learning](#application-of-machine-learning)
 3. [The Data Science Process](#the-data-science-process)
 4. [Scaling Data](#scaling-data)
 5. [Encoding Categorical Data](#encoding-categorical-data)
@@ -79,9 +79,7 @@ The formula for this is:
 
 We subtract the mean (𝜇) from each value (x) and then divide by the standard deviation (𝜎). To understand why this works, it helps to look at an example. Suppose that we have a sample that contains three data points with the following values:
 
-50,  
-100,  
-150  
+50,  100,  150  
 
 The mean of our data would be 100, while the sample standard deviation would be 50.
 
@@ -112,9 +110,7 @@ For each individual value, you subtract the minimum value (𝑥𝑚𝑖𝑛) for
 
 Let's try working through an example with those same three data points:
 
-50,   
-100, 
-150
+50, 100, 150
 
 The minimum value (𝑥𝑚𝑖𝑛) is 50, while the maximum value (𝑥𝑚𝑎𝑥) is 150. The range of the values is 𝑥𝑚𝑎𝑥 −𝑥𝑚𝑖𝑛 = 150 − 50 = 100.
 
@@ -135,3 +131,31 @@ Thus, our transformed data points are:
 Again, the goal was to rescale our data into values ranging from 0 to 1—and as you can see, that's exactly what the formula did.
 
 ## Encoding Categorical Data
+
+There are two common approaches for encoding categorical data: ordinal encoding and one hot encoding.
+
+### Ordinal Encoding
+
+In ordinal encoding, we simply convert the categorical data into integer codes ranging from 0 to (number of categories – 1).
+
+color | Encoder
+------|--------
+red | 0
+blue| 1
+green| 2
+
+Drawabacks:
+- assumed order between categories, i.e red>green
+
+### One Hot Encoding
+
+One-hot encoding is a very different approach. In one-hot encoding, we transform each categorical value into a column. If there are n categorical values, n new columns are added. For example, the Color property has three categorical values: Red, Green, and Blue, so three new columns Red, Green, and Blue are added.
+
+ID | Red | Green | Blue
+---|-----|-------|-----
+1233| 0 | 0 | 1
+2134| 0 | 1 | 0
+3213| 1 | 0 | 0
+
+Drawback: 
+- Large number of columns
