@@ -249,7 +249,7 @@ We understand the text because each word has a meaning. But how do algorithms un
 
 Vectors with length n can be visualized as a line in an n dimension space. For example, a vector (1,1) can be viewed as a line starting from (0, 0) and ending at (1,1).
 
-![graph](graph.png)
+![graph](images/graph.png)
 
 Any vector with the same length can be visualized in the same space. How close one vector is to another can be calculated as vector distance. If two vectors are close to each other, we can say the text represented by the two vectors have a similar meaning or have some connections. For example, if we add [lazy, fox] to our example:
 
@@ -268,7 +268,7 @@ The next step is feature extraction and vectorization, which creates a numeric r
 
 Last, we will feed the vectorized document and labels into a model and start the training.
 
-![textdata](textdata.png)
+![textdata](images/textdata.png)
 
 
 ## The Computer Science Perspective
@@ -329,12 +329,12 @@ Notebooks are originally created as a documenting tool that others can use to re
 
 Notebooks contains several independent cells that allow for the execution of code snippets within those cells. The output of each cell can be saved in the notebook and viewed by others.
 
-![tools](tools.png)
+![tools](images/tools.png)
 
 ##### End-to-end with Azure
 You can analyze and train a small amount of data with your local machine using Jupyter notebook, Visual studio, or other tools. But with very large amounts of data, or you need a faster processor, it's a better idea to train and test the model remotely using cloud services such as Microsoft Azure. You can use Azure Data Science Virtual Machine, Azure Databricks, Azure Machine Learning Compute, or SQL server ML services to train and test models and use Azure Kubernetes to deploy models.
 
-![Azure](azure.png)
+![Azure](images/azure.png)
 
 ## Libraries for Machine Learning
 
