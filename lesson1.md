@@ -7,7 +7,8 @@
 5. [Encoding Categorical Data](#encoding-categorical-data)
 6. [Image Data](#image-data)
 7. [Text Data](#text-data)
-8. [Two Perspective on ML](#two-perspective-on-)
+8. [The Computer Science Perspective](#the-computer-science-perspective)
+9. [The Statistical Perspective](#the-statistical-perspective)
 
 ## What is Machine Learning?
 
@@ -266,3 +267,36 @@ Last, we will feed the vectorized document and labels into a model and start the
 ![textdata](textdata.png)
 
 
+## The Computer Science Perspective
+
+** Output = Program(intput features)**
+
+SKU | Make | Color | Quantity | Price
+----|------|-------|----------|------
+908721 | Guess | Blue | 789 | 45.33
+456552 | Tillys | Red | 244 | 22.91
+789921 | A&F | Green | 387 | 25.92
+872266 | Guess | Blue | 154 | 17.56
+
+Remember that in a typical case of machine learning, you have some kind of input which you feed into the machine learning algorithm, and the algorithm produces some output. In most cases, there are multiple pieces of data being used as input. For example, we can think of a single row from the above table as a vector of data points:
+
+(908721, Guess, Blue, 789, 45.33)
+
+ in computer science terminology, each element of the input vector (such as Guess or Blue) is referred to as an attribute or feature. Thus, we might feed these input features into our machine learning program and the program would then generate some kind of desired output (such as a prediction about how well the product will sell). This can be represented as:
+
+ Output = Program(Input Features)
+
+ ## The Statistical Perspective
+
+ ** Output Variable = f(Input Variables) **
+** => Dependent Variable = f(Independent Variables) **
+** => Y = f(x) **
+
+In statistics, you'll also see the data described in terms of independent variables and dependent variables. These names come from the idea that the value of one variable may depend on the value of some other variables. For example, the selling price of a house is the dependent variable that depends on some independent variables—like the house's location and size.
+
+SKU | Make | Color | Quantity | Price
+----|------|-------|----------|------
+908721 | Guess | Blue | 789 | 45.33
+456552 | Tillys | Red | 244 | 22.91
+789921 | A&F | Green | 387 | 25.92
+872266 | Guess | Blue | 154 | 17.56
