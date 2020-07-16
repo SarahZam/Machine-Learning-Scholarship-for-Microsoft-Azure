@@ -453,11 +453,103 @@ A machine learning model can also be written in a set of weights or coefficients
 Linear regression is an algorithm that uses a straight line (or plane) to describe relationships between variables.
 Linear regression simplifies the target function Y to a line. 
 
-##### Simple Linear Regression: 
-Y = B0 + B1*X;
+#### Simple Linear Regression: 
+**Y = B0 + B1*X**
 
-##### Multiple Linear Regression:
-Y = B0 + B1*X1 + B2*X2 + ... + Bn*Xn
+Example: 
 
 ![slr](images/slr.png)
+
+ We can see that the data points cluster around a straight line. Linear regression is all about finding the line that best fits the data. And this model (or line) can then be used to make predictions. In this case, if we know the number of hours a student has studied for the test, we can predict how many questions he or she can answer correctly. To make this prediction, we need the equation for the line of best fit. The equation is: 
+
+ y = mx + b; 
+
+ m = slope
+ b = y-intercept
+
+
+#### Multiple Linear Regression:
+
+In more complex cases where there is more than one input variable, we might see something like this:
+
+**Y = B0 + B1*X1 + B2*X2 + ... + Bn*Xn**
+
+![mlr](images/mlr.png)
+
+### Training a Linear Regression Model
+
+To "train a linear regression model" simply means to learn the coefficients and bias that best fit the data. 
+
+### The Cost Function: 
+When we make a prediction using the line, we expect the prediction to have some error.
+The process of finding the best model is essentially a process of finding the coefficients and bias that minimize this error. To calculate this error, we use a cost function. 
+The most commonly used cost function for linear regression is the root mean squared error (RMSE)
+
+### Preparing the Data
+ If the raw data does not meet these assumptions, then it needs to be prepared and transformed prior to use.
+
+##### 1.Linear assumption:
+ So the relationship between the input variables and the output variable needs to be a linear relationship. If the raw data does not follow a linear relationship, you may be able to transform) your data prior to using it with the linear regression algorithm. For example, if your data has an exponential relationship, you can use log transformation.
+
+##### 2. Remove collinearity:
+ When two variables are collinear, this means they can be modeled by the same line or are at least highly correlated; in other words, one input variable can be accurately predicted by the other.
+  Having highly correlated input variables will make the model less consistent, so it's important to perform a correlation check among input variables and remove highly correlated input variables.
+
+##### 3. Gaussuan (normal) distribution:
+ Linear regression assumes that the distance between output variables and real data (called residual) is normally distributed. If this is not the case in the raw data, you will need to first transform the data so that the residual has a normal distribution.
+
+##### 4. Rescale data:
+ Linear regression is very sensitive to the distance among data points, so it's always a good idea to normalize or standardize the data.
+
+##### 5. Remove noise:
+ Linear regression is very sensitive to noise and outliers in the data. Outliers will significantly change the line learned, as shown in the picture below. Thus, cleaning the data is a critical step prior to applying linear regression.
+
+### Calculating Coefficients
+The formula for getting the slope of the line:
+
+![slope](images/slope.png)
+
+Intercept:
+
+![intercept](images/intercept.png)
+
+Root mean squared error (RMSE):
+
+![rmse](images/rmse.png)
+
+
+## Parametric vs. Non-parametric
+Based on the assumptions about the shape and structure of the function they try to learn, machine learning algorithms can be divided into two categories: parametric and nonparametric.
+
+### Parametric Machine Learning Algorithms
+Parametric machine learning algorithms make assumptions about the mapping function and have a fixed number of parameters. No matter how much data is used to learn the model, this will not change how many parameters the algorithm has. With a parametric algorithm, we are selecting the form of the function and then learning its coefficients using the training data.
+
+An example of this would be the approach used in linear regression algorithms, where the simplified functional form can be something like:
+
+Y = B0 + B1*X1 + B2*X2 + ... + Bn*Xn
+
+This assumption greatly simplifies the learning process; after selecting the initial function, the remaining problem is simply to estimate the coefficients B0, B1, and B2 using different samples of input variables X1 and X2.
+
+Benefits: 
+1. Simpler and easier to understand
+2. Faster 
+3. Less training data required
+
+Limitations:
+1. Highly constrained
+2. Limited complexity of problems
+3. Poor fit in practice
+
+### Non-parametric Machine Learning Algorithms
+Non-parametric algorithms do not make assumptions regarding the form of the mapping function between input data and output. Consequently, they are free to learn any functional form from the training data.
+
+Benefits: 
+1. High Flexibility - compatible of fitting large number of functional forms
+2. Power - no assumptions
+3. High performance in prediction models
+
+Limitations: 
+1. More training Data required
+2. Slower to train
+3. Overfitting is a risk
 
