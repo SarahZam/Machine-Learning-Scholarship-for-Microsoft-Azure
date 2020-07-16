@@ -13,6 +13,7 @@
 11. [Libraries for Machine Learning](#libraries-for-machine-learning)
 12. [Cloud Services for Machine Learning](#cloud-services-for-machine-learning)
 13. [Models vs. Algorithms](#models-vs.-algorithms)
+14. [Linear Regression](#linear-regression)
 
 ## What is Machine Learning?
 
@@ -447,3 +448,16 @@ Machine learning models are outputs or specific representations of algorithms th
 In the previous example, y = 1*x + 0 is the model we obtained from running the algorithm y = Wx + b on the training data. We can also say that y = 1*x + 0 is the model that can be used to predict y from x.
 
 A machine learning model can also be written in a set of weights or coefficients instead of a full equation. Looking at the previous example, since we know the algorithm, it is redundant to keep the full equation y = 1*x + 0. All we need are the weights (or coefficients) W = 1 and b = 0. Thus, we can also think of a model as a set of weights (or coefficients) that have been learned.
+
+## Linear Regression
+Linear regression is an algorithm that uses a straight line (or plane) to describe relationships between variables.
+Linear regression simplifies the target function Y to a line. 
+
+##### Simple Linear Regression: 
+Y = B0 + B1*X;
+
+##### Multiple Linear Regression:
+Y = B0 + B1*X1 + B2*X2 + ... + Bn*Xn
+
+[!slr](slr.png)
+
