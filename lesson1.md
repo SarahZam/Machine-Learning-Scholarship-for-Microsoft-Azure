@@ -14,6 +14,7 @@
 12. [Cloud Services for Machine Learning](#cloud-services-for-machine-learning)
 13. [Models vs. Algorithms](#models-vs.-algorithms)
 14. [Linear Regression](#linear-regression)
+15. [Parametric vs. Non-parametric](#parametric-vs.-non-parametric)
 
 ## What is Machine Learning?
 
