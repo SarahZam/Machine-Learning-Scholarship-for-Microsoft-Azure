@@ -459,5 +459,5 @@ Y = B0 + B1*X;
 ##### Multiple Linear Regression:
 Y = B0 + B1*X1 + B2*X2 + ... + Bn*Xn
 
-[!slr](slr.png)
+[!slr](images/slr.png)
 
